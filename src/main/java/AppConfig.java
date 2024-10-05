@@ -16,6 +16,7 @@ public class AppConfig {
     @Bean(name="cat")
     @Scope("prototype")
     public Cat getCat() {
+
         System.out.println("cat bean is created");
         Cat cat = new Cat();
         cat.setAge(20);

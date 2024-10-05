@@ -1,4 +1,3 @@
-import org.springframework.context.annotation.Scope;
 public class Cat {
 
     private String name;
