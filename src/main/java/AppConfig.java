@@ -7,8 +7,20 @@ public class AppConfig {
  
     @Bean(name="helloworld")
     public HelloWorld getHelloWorld() {
+        System.out.println("Hello World bean is created");
         HelloWorld helloWorld = new HelloWorld();
         helloWorld.setMessage("Hello World!");
         return helloWorld;
     }
+
+    @Bean(name="cat")
+    @Scope("prototype")
+    public Cat getCat() {
+        System.out.println("cat bean is created");
+        Cat cat = new Cat();
+        cat.setAge(20);
+        cat.setName("Cat");
+        return cat;
+    }
+
 }
